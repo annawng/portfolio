@@ -1,25 +1,31 @@
 'use client';
-import Image from 'next/image';
 import Link from 'next/link';
+import { allura } from '../fonts';
 
 const NavBar = () => {
   return (
-    <nav className='navbar bg-base-100'>
+    <nav className='navbar bg-base-100 fixed z-10 max-w-screen-xl px-16 py-6'>
       <div className='flex-1'>
-        <Link href='/' className='btn btn-ghost normal-case text-xl'>
-          LOGO
+        <Link href='/' className={allura.className + ' lowercase text-3xl'}>
+          Anna Wang
         </Link>
       </div>
       <div className='flex-none'>
-        <ul className='menu menu-horizontal px-1'>
+        <ul className='flex align-center gap-8'>
           <li>
-            <Link href='/'>About</Link>
+            <Link href='#about' className='duration-200 hover:text-accent'>
+              About
+            </Link>
           </li>
           <li>
-            <Link href='/'>Experience</Link>
+            <Link href='#experience' className='duration-200 hover:text-accent'>
+              Experience
+            </Link>
           </li>
           <li>
-            <Link href='/'>Projects</Link>
+            <Link href='#projects' className='duration-200 hover:text-accent'>
+              Projects
+            </Link>
           </li>
         </ul>
       </div>

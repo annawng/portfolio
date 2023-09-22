@@ -1,16 +1,14 @@
 const Hero = () => {
   return (
-    <section className='hero min-h-screen bg-base-200'>
-      <div className='hero-content text-center'>
-        <div className='max-w-md'>
-          <h1 className='text-5xl font-bold'>Hello there</h1>
-          <p className='py-6'>
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-          <button className='btn btn-primary'>Get Started</button>
-        </div>
+    <section className='min-h-screen flex flex-col'>
+      <div className='absolute top-[50%] translate-y-[-50%] px-16'>
+        <h1 className='uppercase tracking-widest text-sm'>
+          Hi, I&apos;m Anna!
+        </h1>
+        <p className='text-4xl font-semibold pt-4'>
+          Software Developer based in Seattle, WA
+        </p>
+        <p className='text-4xl font-semibold pt-2'>Previously @ Mark43</p>
       </div>
     </section>
   );
