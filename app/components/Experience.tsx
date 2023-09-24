@@ -1,3 +1,5 @@
+'use client';
+import { motion } from 'framer-motion';
 import ExperienceDetails from './ExperienceDetails';
 
 const experiences = [
@@ -25,16 +27,23 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id='experience' className='flex flex-row gap-8 p-16'>
-      <div className='flex-1'>
-        <h2 className='text-4xl'>Experience</h2>
-      </div>
-      <div className='flex-1 flex flex-col gap-8'>
-        {experiences.map((experience, index) => (
-          <ExperienceDetails {...experience} key={index} />
-        ))}
-      </div>
-    </section>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.4, duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+      <section id='experience' className='flex flex-row gap-8 p-16'>
+        <div className='flex-1'>
+          <h2 className='text-4xl'>Experience</h2>
+        </div>
+        <div className='flex-1 flex flex-col gap-8'>
+          {experiences.map((experience, index) => (
+            <ExperienceDetails {...experience} key={index} />
+          ))}
+        </div>
+      </section>
+    </motion.div>
   );
 };
 

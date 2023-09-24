@@ -35,7 +35,9 @@ const ProjectOverview = ({
           <h3 className='text-3xl font-medium leading-[3.5rem]'>{title}</h3>
         </div>
         <p>{description}</p>
-        <Link href={`/project/${href}`}>Discover</Link>
+        <Link href={`/project/${href}`} className='w-fit'>
+          View Project
+        </Link>
       </div>
     </div>
   );
