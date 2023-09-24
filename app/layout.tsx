@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' data-theme='light'>
+    <html lang='en' data-theme='light' className='scroll-pt-8 scroll-smooth'>
       <body className={inter.className}>{children}</body>
     </html>
   );
