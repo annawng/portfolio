@@ -6,7 +6,7 @@ const projectList = [
     subtitle: 'UX Engineering Intern',
     description: 'Building components and improving accessibility.',
     imageSrc: '/arc.png',
-    href: 'arc-design-system',
+    href: 'arc',
   },
   {
     title: 'Leon Coffee House',
@@ -22,14 +22,14 @@ const projectList = [
     description:
       'Website for generating playlists with recommended songs that can be exported to Spotify.',
     imageSrc: '/playlist.png',
-    href: 'leon-coffee-house',
+    href: 'spotify-playlist-generator',
   },
   {
     title: 'News Homepage',
     subtitle: 'Developer',
     description: 'Responsive CSS layout practice.',
     imageSrc: '/news.png',
-    href: 'leon-coffee-house',
+    href: 'news-homepage',
   },
 ];
 

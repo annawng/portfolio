@@ -39,19 +39,21 @@ const ProjectOverview = ({
           variants={imageVariants}
           transition={{ ease: 'easeInOut' }}
         >
-          <Image
-            src={imageSrc}
-            width={1080}
-            height={675}
-            alt=''
-            className='w-full object-cover drop-shadow-2xl cursor-pointer'
-            onMouseEnter={() => {
-              controls.start('hover');
-            }}
-            onMouseLeave={() => {
-              controls.start('initial');
-            }}
-          />
+          <Link href={`/project/${href}`}>
+            <Image
+              src={imageSrc}
+              width={1080}
+              height={675}
+              alt=''
+              className='w-full object-cover drop-shadow-2xl cursor-pointer'
+              onMouseEnter={() => {
+                controls.start('hover');
+              }}
+              onMouseLeave={() => {
+                controls.start('initial');
+              }}
+            />
+          </Link>
         </motion.div>
       </div>
       <div className='flex flex-col gap-8 pl-12 flex-1'>
@@ -61,7 +63,6 @@ const ProjectOverview = ({
         </div>
         <p>{description}</p>
         <motion.div
-          className='flex items-center gap-2 w-fit cursor-pointer'
           animate={controls}
           onMouseEnter={() => {
             controls.start('hover');
@@ -70,11 +71,14 @@ const ProjectOverview = ({
             controls.start('initial');
           }}
         >
-          <motion.div
-            className='border border-black w-[25px] h-[1px]'
-            variants={lineVariants}
-          ></motion.div>
-          <Link href={`/project/${href}`} className='w-fit'>
+          <Link
+            href={`/project/${href}`}
+            className='flex items-center gap-2 w-fit'
+          >
+            <motion.div
+              className='border border-black w-[25px] h-[1px]'
+              variants={lineVariants}
+            ></motion.div>
             View Project
           </Link>
         </motion.div>
