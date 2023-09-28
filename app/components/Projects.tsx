@@ -2,20 +2,6 @@ import ProjectOverview from './ProjectOverview';
 
 const projectList = [
   {
-    title: 'ARC Accessibility',
-    subtitle: 'UX Engineering Intern',
-    description: 'Integrating accessibiliity into a design system.',
-    imageSrc: '/arc.png',
-    href: 'arc-accessibility',
-  },
-  {
-    title: 'ARC Components',
-    subtitle: 'UX Engineering Intern',
-    description: 'End-to-end component development.',
-    imageSrc: '/arc-components.png',
-    href: 'arc-components',
-  },
-  {
     title: 'Leon Coffee House',
     subtitle: 'Developer',
     description:
