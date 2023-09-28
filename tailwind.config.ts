@@ -22,10 +22,9 @@ const config: Config = {
     themes: [
       {
         light: {
-          primary: 'hsl(312, 60%, 40%)',
-          // primary: 'hsl(284, 22%, 80%)',
-          secondary: '#f6cbd1',
-          accent: '#b4e9d6',
+          primary: '#9f237a',
+          secondary: '#325288',
+          accent: '#d96098',
           neutral: '#70acc7',
           'base-100': '#ffffff',
           info: '#3abff8',

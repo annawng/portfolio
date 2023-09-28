@@ -13,20 +13,20 @@ const NavBar = () => {
       <div className='flex-none'>
         <ul className='flex align-center gap-8'>
           <li>
-            <Link href='/#about' className='duration-200 hover:text-accent'>
+            <Link href='/#about' className='duration-200 hover:text-primary'>
               About
             </Link>
           </li>
           <li>
             <Link
               href='/#experience'
-              className='duration-200 hover:text-accent'
+              className='duration-200 hover:text-primary'
             >
               Experience
             </Link>
           </li>
           <li>
-            <Link href='/#projects' className='duration-200 hover:text-accent'>
+            <Link href='/#projects' className='duration-200 hover:text-primary'>
               Projects
             </Link>
           </li>

@@ -7,7 +7,7 @@ type SkillListProps = {
 
 const SkillList = ({ skills }: SkillListProps) => {
   return (
-    <ul className='flex flex-row gap-1.5 flex-wrap'>
+    <ul className='flex flex-row gap-2 flex-wrap'>
       {skills.map((skill, index) => (
         <li key={index}>
           <Skill text={skill} />

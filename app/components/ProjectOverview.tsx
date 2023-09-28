@@ -1,6 +1,5 @@
 'use client';
 import { motion, Variants, useAnimationControls } from 'framer-motion';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -31,9 +30,14 @@ const ProjectOverview = ({
     hover: { width: '50px' },
   };
 
+  const textVariants: Variants = {
+    initial: { color: '#000' },
+    hover: { color: '#9f237a' },
+  };
+
   return (
     <div className='flex justify-between items-center w-full overflow-hidden'>
-      <div className='overflow-hidden w-7/12 bg-gray-100 p-12 flex justify-center'>
+      <div className='overflow-hidden w-7/12 bg-base-200 p-12 flex justify-center'>
         <motion.div
           animate={controls}
           variants={imageVariants}
@@ -76,10 +80,10 @@ const ProjectOverview = ({
             className='flex items-center gap-2 w-fit'
           >
             <motion.div
-              className='border border-black w-[25px] h-[1px]'
+              className='border border-primary w-[25px] h-[1px]'
               variants={lineVariants}
             ></motion.div>
-            View Project
+            <motion.p variants={textVariants}>View Project</motion.p>
           </Link>
         </motion.div>
       </div>
