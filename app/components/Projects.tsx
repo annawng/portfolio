@@ -2,11 +2,18 @@ import ProjectOverview from './ProjectOverview';
 
 const projectList = [
   {
-    title: 'ARC Design System',
+    title: 'ARC Accessibility',
     subtitle: 'UX Engineering Intern',
-    description: 'Building components and improving accessibility.',
+    description: 'Integrating accessibiliity into a design system.',
     imageSrc: '/arc.png',
-    href: 'arc',
+    href: 'arc-accessibility',
+  },
+  {
+    title: 'ARC Components',
+    subtitle: 'UX Engineering Intern',
+    description: 'End-to-end component development.',
+    imageSrc: '/arc-components.png',
+    href: 'arc-components',
   },
   {
     title: 'Leon Coffee House',
@@ -17,7 +24,7 @@ const projectList = [
     href: 'leon-coffee-house',
   },
   {
-    title: 'Playlist Generator',
+    title: 'Spotify Playlist Generator',
     subtitle: 'Designer & Developer',
     description:
       'Website for generating playlists with recommended songs that can be exported to Spotify.',
