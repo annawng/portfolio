@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Leon = () => {
   return (
-    <div className='pt-24 px-16'>
+    <div className='pt-24 px-8 md:px-16'>
       <h1 className='text-3xl mb-8'>Leon Coffee House</h1>
       <p className='max-w-xl'>
         <a href='https://dubvelopersuw.org/' target='_blank'>
@@ -14,18 +14,18 @@ const Leon = () => {
         house, Leon Coffee House.
       </p>
 
-      <div className='flex gap-4 mt-4 mb-16'>
+      <div className='flex gap-2 mt-4 mb-16'>
         <a
           href='http://leoncoffeehouse.com/'
           target='_blank'
-          className='btn btn-primary text-white normal-case'
+          className='btn btn-primary'
         >
           Live Site
         </a>
         <a
           href='https://github.com/webimpactuw/Leon-Cafe'
           target='_blank'
-          className='btn btn-primary btn-outline normal-case'
+          className='btn btn-secondary'
         >
           Code
         </a>

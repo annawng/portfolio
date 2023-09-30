@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const SpotifyPlaylistGenerator = () => {
   return (
-    <div className='pt-24 px-16'>
+    <div className='pt-24 px-8 md:px-16'>
       <h1 className='text-3xl mb-8'>Spotify Playlist Generator</h1>
       <p className='max-w-xl'>
         Responsive web app that recommends songs based on the song selected by
@@ -10,18 +10,18 @@ const SpotifyPlaylistGenerator = () => {
         export it to Spotify after connecting their account.
       </p>
 
-      <div className='flex gap-4 mt-4 mb-16'>
+      <div className='flex gap-2 mt-4 mb-16'>
         <a
           href='https://playlistgenerator.netlify.app/'
           target='_blank'
-          className='btn btn-primary text-white normal-case'
+          className='btn btn-primary'
         >
           Live Site
         </a>
         <a
           href='https://github.com/annawng/spotify-playlist-generator'
           target='_blank'
-          className='btn btn-primary btn-outline normal-case'
+          className='btn btn-secondary'
         >
           Code
         </a>

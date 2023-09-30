@@ -1,4 +1,5 @@
 'use client';
+import { useState, useEffect } from 'react';
 import { motion, Variants, useAnimationControls } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,7 +9,7 @@ type ProjectOverviewProps = {
   subtitle: string;
   description: string;
   imageSrc: string;
-  href: string; // can maybe generate from title
+  href: string;
 };
 
 const ProjectOverview = ({
@@ -18,6 +19,21 @@ const ProjectOverview = ({
   imageSrc,
   href,
 }: ProjectOverviewProps) => {
+  const [width, setWidth] = useState<number>(window.innerWidth);
+
+  const handleWindowSizeChange = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
+
   const controls = useAnimationControls();
 
   const imageVariants: Variants = {
@@ -36,56 +52,75 @@ const ProjectOverview = ({
   };
 
   return (
-    <div className='flex justify-between items-center w-full overflow-hidden'>
-      <div className='overflow-hidden w-7/12 bg-base-200 p-12 flex justify-center'>
-        <motion.div
-          animate={controls}
-          variants={imageVariants}
-          transition={{ ease: 'easeInOut' }}
-        >
+    <div className='flex flex-col md:flex-row justify-between md:items-center w-full overflow-hidden'>
+      <div className='overflow-hidden flex justify-center sm:bg-base-200 sm:p-12 md:w-7/12'>
+        {isMobile ? (
           <Link href={`/project/${href}`}>
             <Image
               src={imageSrc}
               width={1080}
               height={675}
               alt=''
-              className='w-full object-cover drop-shadow-2xl cursor-pointer'
-              onMouseEnter={() => {
-                controls.start('hover');
-              }}
-              onMouseLeave={() => {
-                controls.start('initial');
-              }}
+              className='w-full object-cover'
             />
           </Link>
-        </motion.div>
+        ) : (
+          <motion.div
+            animate={controls}
+            variants={imageVariants}
+            transition={{ ease: 'easeInOut' }}
+          >
+            <Link href={`/project/${href}`}>
+              <Image
+                src={imageSrc}
+                width={1080}
+                height={675}
+                alt=''
+                className='w-full object-cover drop-shadow-2xl cursor-pointer'
+                onMouseEnter={() => {
+                  controls.start('hover');
+                }}
+                onMouseLeave={() => {
+                  controls.start('initial');
+                }}
+              />
+            </Link>
+          </motion.div>
+        )}
       </div>
-      <div className='flex flex-col gap-8 pl-12 flex-1'>
+      <div className='flex flex-col gap-4 md:gap-8 md:pl-12 flex-1 mt-8 md:mt-0'>
         <div>
-          <p className='uppercase text-neutral-500 mb-1'>{subtitle}</p>
-          <h3 className='text-3xl font-medium leading-[3.5rem]'>{title}</h3>
+          <p className='uppercase text-neutral-500'>{subtitle}</p>
+          <h3 className='text-3xl font-medium mt-2 md:mt-4'>{title}</h3>
         </div>
         <p>{description}</p>
-        <motion.div
-          animate={controls}
-          onMouseEnter={() => {
-            controls.start('hover');
-          }}
-          onMouseLeave={() => {
-            controls.start('initial');
-          }}
-        >
-          <Link
-            href={`/project/${href}`}
-            className='flex items-center gap-2 w-fit'
-          >
-            <motion.div
-              className='border border-primary w-[25px] h-[1px]'
-              variants={lineVariants}
-            ></motion.div>
-            <motion.p variants={textVariants}>View Project</motion.p>
+
+        {isMobile ? (
+          <Link href={`/project/${href}`} className='btn btn-primary w-fit'>
+            View Project
           </Link>
-        </motion.div>
+        ) : (
+          <motion.div
+            animate={controls}
+            onMouseEnter={() => {
+              controls.start('hover');
+            }}
+            onMouseLeave={() => {
+              controls.start('initial');
+            }}
+          >
+            <Link
+              href={`/project/${href}`}
+              className='flex items-center gap-2 w-fit'
+            >
+              <motion.div
+                className='border border-primary w-[25px] h-[1px]'
+                variants={lineVariants}
+              ></motion.div>
+              <motion.p variants={textVariants}>View Project</motion.p>
+            </Link>
+          </motion.div>
+        )}
       </div>
     </div>
   );

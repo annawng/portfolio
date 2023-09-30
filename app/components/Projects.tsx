@@ -28,7 +28,7 @@ const projectList = [
 
 const Projects = () => {
   return (
-    <section id='projects' className='p-16'>
+    <section id='projects' className='px-8 md:px-16 py-16'>
       <h2 className='text-4xl mb-8'>Projects</h2>
       <div className='flex flex-col gap-24'>
         {projectList.map((project, index) => (

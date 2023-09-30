@@ -12,6 +12,20 @@
   }
 }
 
+@layer components {
+  .btn {
+    @apply normal-case btn-sm;
+  }
+
+  .btn-primary {
+    @apply text-white;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-primary text-primary hover:bg-primary-content hover:border-primary;
+  }
+}
+
 body {
   color: rgb(var(--foreground-rgb));
 }

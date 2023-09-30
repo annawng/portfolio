@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { allura } from '../fonts';
 
 const NavBar = () => {
-  const [showMenu, setShowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState<boolean>(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -54,8 +54,8 @@ const NavBar = () => {
         <Image
           src='/icon-menu.svg'
           alt='Open menu'
-          width='32'
-          height='32'
+          width='24'
+          height='24'
           onClick={toggleMenu}
           className='cursor-pointer'
         />
@@ -74,8 +74,8 @@ const NavBar = () => {
                 <Image
                   src='/icon-menu-close.svg'
                   alt='Close menu'
-                  width='32'
-                  height='32'
+                  width='24'
+                  height='24'
                   onClick={toggleMenu}
                   className='mr-0 cursor-pointer'
                 />

@@ -10,7 +10,10 @@ const About = () => {
       transition={{ delay: 0.4, duration: 1.2 }}
       viewport={{ once: true }}
     >
-      <section id='about' className='flex flex-row gap-8 p-16'>
+      <section
+        id='about'
+        className='flex flex-col md:flex-row gap-8 px-8 md:px-16 py-16'
+      >
         <div className='flex-1'>
           <h2 className='text-4xl'>About</h2>
         </div>
@@ -34,7 +37,7 @@ const About = () => {
             width={2428}
             height={2428}
             alt=''
-            className='w-full h-4/6 object-cover object-bottom mt-8'
+            className='w-full aspect-[4/3] object-cover object-bottom mt-8'
           />
         </div>
       </section>
