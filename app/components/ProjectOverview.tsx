@@ -1,5 +1,4 @@
 'use client';
-import { useState, useEffect } from 'react';
 import { motion, Variants, useAnimationControls } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -19,21 +18,6 @@ const ProjectOverview = ({
   imageSrc,
   href,
 }: ProjectOverviewProps) => {
-  const [width, setWidth] = useState<number>(window.innerWidth);
-
-  const handleWindowSizeChange = () => {
-    setWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', handleWindowSizeChange);
-    return () => {
-      window.removeEventListener('resize', handleWindowSizeChange);
-    };
-  }, []);
-
-  const isMobile = width <= 768;
-
   const controls = useAnimationControls();
 
   const imageVariants: Variants = {
@@ -54,39 +38,37 @@ const ProjectOverview = ({
   return (
     <div className='flex flex-col md:flex-row justify-between md:items-center w-full overflow-hidden'>
       <div className='overflow-hidden flex justify-center sm:bg-base-200 sm:p-12 md:w-7/12'>
-        {isMobile ? (
+        <Link href={`/project/${href}`}>
+          <Image
+            src={imageSrc}
+            width={1080}
+            height={675}
+            alt=''
+            className='w-full object-cover md:hidden'
+          />
+        </Link>
+        <motion.div
+          animate={controls}
+          variants={imageVariants}
+          transition={{ ease: 'easeInOut' }}
+          className='hidden md:block'
+        >
           <Link href={`/project/${href}`}>
             <Image
               src={imageSrc}
               width={1080}
               height={675}
               alt=''
-              className='w-full object-cover'
+              className='w-full object-cover drop-shadow-2xl cursor-pointer'
+              onMouseEnter={() => {
+                controls.start('hover');
+              }}
+              onMouseLeave={() => {
+                controls.start('initial');
+              }}
             />
           </Link>
-        ) : (
-          <motion.div
-            animate={controls}
-            variants={imageVariants}
-            transition={{ ease: 'easeInOut' }}
-          >
-            <Link href={`/project/${href}`}>
-              <Image
-                src={imageSrc}
-                width={1080}
-                height={675}
-                alt=''
-                className='w-full object-cover drop-shadow-2xl cursor-pointer'
-                onMouseEnter={() => {
-                  controls.start('hover');
-                }}
-                onMouseLeave={() => {
-                  controls.start('initial');
-                }}
-              />
-            </Link>
-          </motion.div>
-        )}
+        </motion.div>
       </div>
       <div className='flex flex-col gap-4 md:gap-8 md:pl-12 flex-1 mt-8 md:mt-0'>
         <div>
@@ -95,32 +77,33 @@ const ProjectOverview = ({
         </div>
         <p>{description}</p>
 
-        {isMobile ? (
-          <Link href={`/project/${href}`} className='btn btn-primary w-fit'>
-            View Project
-          </Link>
-        ) : (
-          <motion.div
-            animate={controls}
-            onMouseEnter={() => {
-              controls.start('hover');
-            }}
-            onMouseLeave={() => {
-              controls.start('initial');
-            }}
+        <Link
+          href={`/project/${href}`}
+          className='btn btn-primary w-fit md:hidden'
+        >
+          View Project
+        </Link>
+        <motion.div
+          animate={controls}
+          onMouseEnter={() => {
+            controls.start('hover');
+          }}
+          onMouseLeave={() => {
+            controls.start('initial');
+          }}
+          className='hidden md:block'
+        >
+          <Link
+            href={`/project/${href}`}
+            className='flex items-center gap-2 w-fit'
           >
-            <Link
-              href={`/project/${href}`}
-              className='flex items-center gap-2 w-fit'
-            >
-              <motion.div
-                className='border border-primary w-[25px] h-[1px]'
-                variants={lineVariants}
-              ></motion.div>
-              <motion.p variants={textVariants}>View Project</motion.p>
-            </Link>
-          </motion.div>
-        )}
+            <motion.div
+              className='border border-primary w-[25px] h-[1px]'
+              variants={lineVariants}
+            ></motion.div>
+            <motion.p variants={textVariants}>View Project</motion.p>
+          </Link>
+        </motion.div>
       </div>
     </div>
   );
