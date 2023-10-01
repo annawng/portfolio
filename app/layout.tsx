@@ -1,7 +1,6 @@
-'use client';
 import './globals.css';
 import type { Metadata } from 'next';
-import { ThemeProvider } from 'next-themes';
+import { Providers } from './theme/Providers';
 
 import { inter } from './fonts';
 import NavBar from './components/NavBar';
@@ -23,13 +22,13 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className={inter.className}>
-        <ThemeProvider defaultTheme='system'>
+        <Providers>
           <header className='max-w-screen-xl m-auto'>
             <NavBar />
           </header>
           <main className='max-w-screen-xl m-auto'>{children}</main>
           <Footer />
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );
