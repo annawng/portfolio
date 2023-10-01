@@ -1,7 +1,9 @@
+'use client';
 import './globals.css';
 import type { Metadata } from 'next';
-import { inter } from './fonts';
+import { ThemeProvider } from 'next-themes';
 
+import { inter } from './fonts';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 
@@ -15,13 +17,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' data-theme='light' className='scroll-pt-8 scroll-smooth'>
+    <html
+      lang='en'
+      className='scroll-pt-8 scroll-smooth'
+      suppressHydrationWarning
+    >
       <body className={inter.className}>
-        <header className='max-w-screen-xl m-auto'>
-          <NavBar />
-        </header>
-        <main className='max-w-screen-xl m-auto'>{children}</main>
-        <Footer />
+        <ThemeProvider defaultTheme='system'>
+          <header className='max-w-screen-xl m-auto'>
+            <NavBar />
+          </header>
+          <main className='max-w-screen-xl m-auto'>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

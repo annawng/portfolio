@@ -31,8 +31,8 @@ const ProjectOverview = ({
   };
 
   const textVariants: Variants = {
-    initial: { color: '#000' },
-    hover: { color: '#9f237a' },
+    initial: { color: 'var(--text)' },
+    hover: { color: 'var(--primary)' },
   };
 
   return (
@@ -72,7 +72,7 @@ const ProjectOverview = ({
       </div>
       <div className='flex flex-col gap-4 md:gap-8 md:pl-12 flex-1 mt-8 md:mt-0'>
         <div>
-          <p className='uppercase text-neutral-500'>{subtitle}</p>
+          <p className='uppercase text-neutral'>{subtitle}</p>
           <h3 className='text-3xl font-medium mt-2 md:mt-4'>{title}</h3>
         </div>
         <p>{description}</p>

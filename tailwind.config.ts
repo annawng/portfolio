@@ -6,6 +6,7 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       backgroundImage: {
@@ -23,14 +24,16 @@ const config: Config = {
       {
         light: {
           primary: '#9f237a',
-          secondary: '#325288',
-          accent: '#d96098',
-          neutral: '#70acc7',
+          accent: '#9f237a',
+          neutral: '#595959',
           'base-100': '#ffffff',
-          info: '#3abff8',
-          success: '#36d399',
-          warning: '#fbbd23',
-          error: '#f87272',
+        },
+        dark: {
+          primary: '#d298c1',
+          accent: '#9f237a',
+          neutral: '#c4c4c4',
+          'base-100': '#121212',
+          'base-200': '#1f1f1f',
         },
       },
     ],

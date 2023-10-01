@@ -51,14 +51,20 @@ const NavBar = () => {
         <Link href='/' className={allura.className + ' lowercase text-3xl'}>
           Anna Wang
         </Link>
-        <Image
-          src='/icon-menu.svg'
-          alt='Open menu'
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 20 16'
           width='24'
           height='24'
           onClick={toggleMenu}
-          className='cursor-pointer'
-        />
+          className='cursor-pointer fill-base-content'
+          aria-label='Open menu'
+        >
+          <path
+            fill-rule='evenodd'
+            d='M0 16h20v-2H0v2ZM0 2h20V0H0v2Zm0 7h20V7H0v2Z'
+          />
+        </svg>
         <AnimatePresence>
           {showMenu && (
             <motion.div
@@ -71,14 +77,20 @@ const NavBar = () => {
               transition={{ duration: 0.3, type: 'tween', ease: 'easeInOut' }}
             >
               <div className='flex justify-end px-8 py-6'>
-                <Image
-                  src='/icon-menu-close.svg'
-                  alt='Close menu'
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  viewBox='0 0 21 20'
                   width='24'
                   height='24'
                   onClick={toggleMenu}
-                  className='mr-0 cursor-pointer'
-                />
+                  className='mr-0 cursor-pointer fill-base-content'
+                  aria-label='Close menu'
+                >
+                  <path
+                    fill-rule='evenodd'
+                    d='M12.018 10 21 18.554 19.481 20 10.5 11.446 1.518 20 0 18.554 8.981 10 0 1.446 1.518 0 10.5 8.554 19.481 0 21 1.446z'
+                  />
+                </svg>
               </div>
               <ul
                 tabIndex={0}

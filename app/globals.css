@@ -4,11 +4,15 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
+  --primary: #9f237a;
+  --text: #000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
+    --primary: #d298c1;
+    --text: #fff;
   }
 }
 
@@ -18,11 +22,11 @@
   }
 
   .btn-primary {
-    @apply text-white;
+    @apply text-white bg-accent border-accent hover:bg-accent-focus hover:border-accent-focus;
   }
 
   .btn-secondary {
-    @apply bg-transparent border-primary text-primary hover:bg-primary-content hover:border-primary;
+    @apply bg-transparent border-neutral-300 text-primary hover:bg-neutral-300/30 hover:border-neutral-300;
   }
 }
 
