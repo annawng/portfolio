@@ -5,7 +5,11 @@ const Leon = () => {
     <div className='pt-24 px-8 md:px-16'>
       <h1 className='text-3xl mb-8'>Leon Coffee House</h1>
       <p className='max-w-xl'>
-        <a href='https://dubvelopersuw.org/' target='_blank'>
+        <a
+          href='https://dubvelopersuw.org/'
+          target='_blank'
+          className='text-primary hover:text-primary-focus'
+        >
           DUBvelopers
         </a>{' '}
         is a student organization at the University of Washington that creates

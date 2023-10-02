@@ -5,7 +5,11 @@ const NewsHomepage = () => {
     <div className='pt-24 px-8 md:px-16'>
       <h1 className='text-3xl mb-8'>News Homepage</h1>
       <p className='max-w-xl'>
-        <a href='https://www.frontendmentor.io/' target='_blank'>
+        <a
+          href='https://www.frontendmentor.io/'
+          target='_blank'
+          className='text-primary hover:text-primary-focus'
+        >
           Frontend Mentor
         </a>{' '}
         challenge where I built out a responsive news website homepage to
