@@ -27,6 +27,7 @@ const config: Config = {
           accent: '#9f237a',
           neutral: '#595959',
           'base-100': '#ffffff',
+          'base-content': '#000000',
         },
         dark: {
           primary: '#d298c1',
@@ -34,6 +35,7 @@ const config: Config = {
           neutral: '#c4c4c4',
           'base-100': '#121212',
           'base-200': '#1f1f1f',
+          'base-content': '#ffffff',
         },
       },
     ],

@@ -68,7 +68,7 @@ const NavBar = () => {
         <AnimatePresence>
           {showMenu && (
             <motion.div
-              className='fixed bg-base-100 w-screen h-screen inset-0'
+              className='fixed bg-base-100 w-screen h-screen inset-0 z-10'
               initial={{ x: '100vw' }}
               animate={{ x: '0' }}
               exit={{
@@ -76,7 +76,7 @@ const NavBar = () => {
               }}
               transition={{ duration: 0.3, type: 'tween', ease: 'easeInOut' }}
             >
-              <div className='flex justify-end px-8 py-6'>
+              <div className='nav-open flex justify-end px-8 py-6'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 21 20'
