@@ -1,12 +1,10 @@
 'use client';
 import Image from 'next/image';
-import { forwardRef, ForwardedRef } from 'react';
 
-const About = (_: unknown, ref: ForwardedRef<HTMLElement>) => {
+const About = () => {
   return (
     <section
       id='about'
-      ref={ref}
       className='flex flex-col md:flex-row gap-8 px-8 md:px-16 py-16'
     >
       <div className='flex-1'>
@@ -39,4 +37,4 @@ const About = (_: unknown, ref: ForwardedRef<HTMLElement>) => {
   );
 };
 
-export default forwardRef(About);
+export default About;
