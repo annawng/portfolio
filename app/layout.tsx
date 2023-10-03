@@ -1,6 +1,4 @@
-'use client';
 import './globals.css';
-import { useState, useEffect } from 'react';
 import type { Metadata } from 'next';
 
 import { Providers } from './theme/Providers';
@@ -17,12 +15,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <html
       lang='en'
@@ -31,19 +23,11 @@ export default function RootLayout({
     >
       <body className={inter.className}>
         <Providers>
-          {mounted ? (
-            <>
-              <header className='max-w-screen-xl m-auto'>
-                <NavBar />
-              </header>
-              <main className='max-w-screen-xl m-auto'>{children}</main>
-              <Footer />
-            </>
-          ) : (
-            <div className='w-screen h-screen flex flex-col items-center justify-center'>
-              <span className='loading loading-spinner loading-lg text-primary'></span>
-            </div>
-          )}
+          <header className='max-w-screen-xl m-auto'>
+            <NavBar />
+          </header>
+          <main className='max-w-screen-xl m-auto'>{children}</main>
+          <Footer />
         </Providers>
       </body>
     </html>

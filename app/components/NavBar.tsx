@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
@@ -7,11 +7,17 @@ import { allura } from '../fonts';
 
 const NavBar = () => {
   const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState<boolean>(false);
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <nav className='navbar bg-base-100 fixed z-10 max-w-screen-xl px-8 md:px-16 py-6'>
       <div className='hidden md:flex w-full'>
@@ -20,7 +26,11 @@ const NavBar = () => {
             Anna Wang
           </Link>
         </div>
-        <div className='flex items-center'>
+        <div
+          className={`${
+            mounted ? 'opacity-100' : 'opacity-0'
+          } flex items-center duration-200`}
+        >
           <ul className='flex align-center gap-8'>
             <li>
               <Link href='/#about' className='duration-200 hover:text-primary'>
@@ -45,7 +55,7 @@ const NavBar = () => {
             </li>
           </ul>
           <div className='divider divider-horizontal'></div>
-          <label className='swap swap-rotate'>
+          <label className={'swap swap-rotate'}>
             <input
               type='checkbox'
               onClick={() =>
