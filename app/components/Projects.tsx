@@ -1,3 +1,5 @@
+import { forwardRef, ForwardedRef } from 'react';
+
 import ProjectOverview from './ProjectOverview';
 
 const projectList = [
@@ -6,7 +8,7 @@ const projectList = [
     subtitle: 'Developer',
     description:
       'Worked on a team of designers and developers to build a website for a local coffee shop.',
-    imageSrc: '/leon.png',
+    src: '/leon.png',
     href: 'leon-coffee-house',
   },
   {
@@ -14,21 +16,21 @@ const projectList = [
     subtitle: 'Designer & Developer',
     description:
       'Website for generating playlists with recommended songs that can be exported to Spotify.',
-    imageSrc: '/playlist.png',
+    src: '/playlist.png',
     href: 'spotify-playlist-generator',
   },
   {
     title: 'News Homepage',
     subtitle: 'Developer',
     description: 'Responsive CSS layout practice.',
-    imageSrc: '/news.png',
+    src: '/news.png',
     href: 'news-homepage',
   },
 ];
 
-const Projects = () => {
+const Projects = (_: unknown, ref: ForwardedRef<HTMLElement>) => {
   return (
-    <section id='projects' className='px-8 md:px-16 py-16'>
+    <section id='projects' ref={ref} className='px-8 md:px-16 py-16'>
       <h2 className='text-4xl mb-8'>Projects</h2>
       <div className='flex flex-col gap-24'>
         {projectList.map((project, index) => (
@@ -39,4 +41,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default forwardRef(Projects);
