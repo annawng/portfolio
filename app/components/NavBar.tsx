@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { allura } from '../fonts';
+import { useRefContext } from './AppWrapper';
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -10,6 +11,8 @@ const NavBar = () => {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+
+  const { aboutRef, experienceRef, projectsRef } = useRefContext();
 
   return (
     <nav className='navbar bg-base-100 fixed z-10 max-w-screen-xl px-8 md:px-16 py-6'>
@@ -21,22 +24,40 @@ const NavBar = () => {
         </div>
         <ul className='flex items-center align-center gap-8'>
           <li>
-            <Link href='/#about' className='duration-200 hover:text-primary'>
+            <p
+              className='duration-200 hover:text-primary cursor-pointer'
+              onClick={() => {
+                aboutRef &&
+                  aboutRef.current &&
+                  aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               About
-            </Link>
+            </p>
           </li>
           <li>
-            <Link
-              href='/#experience'
-              className='duration-200 hover:text-primary'
+            <p
+              className='duration-200 hover:text-primary cursor-pointer'
+              onClick={() => {
+                experienceRef &&
+                  experienceRef.current &&
+                  experienceRef.current.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               Experience
-            </Link>
+            </p>
           </li>
           <li>
-            <Link href='/#projects' className='duration-200 hover:text-primary'>
+            <p
+              className='duration-200 hover:text-primary cursor-pointer'
+              onClick={() => {
+                projectsRef &&
+                  projectsRef.current &&
+                  projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Projects
-            </Link>
+            </p>
           </li>
         </ul>
       </div>

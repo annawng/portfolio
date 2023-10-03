@@ -1,4 +1,6 @@
 'use client';
+import { forwardRef, ForwardedRef } from 'react';
+
 import ExperienceDetails from './ExperienceDetails';
 
 const experiences = [
@@ -24,10 +26,11 @@ const experiences = [
   },
 ];
 
-const Experience = () => {
+const Experience = (_: unknown, ref: ForwardedRef<HTMLElement>) => {
   return (
     <section
       id='experience'
+      ref={ref}
       className='flex flex-col md:flex-row gap-8 px-8 md:px-16 py-16'
     >
       <div className='flex-1'>
@@ -42,4 +45,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default forwardRef(Experience);
