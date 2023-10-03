@@ -3,8 +3,7 @@ import type { Metadata } from 'next';
 
 import { Providers } from './theme/Providers';
 import { inter } from './fonts';
-import NavBar from './components/NavBar';
-import Footer from './components/Footer';
+import AppWrapper from './components/AppWrapper';
 
 export const metadata: Metadata = {
   title: 'Anna Wang',
@@ -23,11 +22,7 @@ export default function RootLayout({
     >
       <body className={inter.className}>
         <Providers>
-          <header className='max-w-screen-xl m-auto'>
-            <NavBar />
-          </header>
-          <main className='max-w-screen-xl m-auto'>{children}</main>
-          <Footer />
+          <AppWrapper>{children}</AppWrapper>
         </Providers>
       </body>
     </html>

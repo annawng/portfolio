@@ -8,12 +8,10 @@
   --text: #000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --primary: #d298c1;
-    --text: #fff;
-  }
+[data-theme='dark'] {
+  --foreground-rgb: 255, 255, 255;
+  --primary: #d298c1;
+  --text: #fff;
 }
 
 @layer components {
