@@ -7,7 +7,7 @@ type ProjectOverviewProps = {
   title: string;
   subtitle: string;
   description: string;
-  imageSrc: string;
+  src: string;
   href: string;
 };
 
@@ -15,7 +15,7 @@ const ProjectOverview = ({
   title,
   subtitle,
   description,
-  imageSrc,
+  src,
   href,
 }: ProjectOverviewProps) => {
   const controls = useAnimationControls();
@@ -40,7 +40,7 @@ const ProjectOverview = ({
       <div className='overflow-hidden flex justify-center sm:bg-base-200 sm:p-12 md:w-7/12'>
         <Link href={`/project/${href}`}>
           <Image
-            src={imageSrc}
+            src={src}
             width={1080}
             height={675}
             alt=''
@@ -55,7 +55,7 @@ const ProjectOverview = ({
         >
           <Link href={`/project/${href}`}>
             <Image
-              src={imageSrc}
+              src={src}
               width={1080}
               height={675}
               alt=''
