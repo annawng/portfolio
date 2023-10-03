@@ -119,38 +119,38 @@ const NavBar = () => {
                   />
                 </svg>
               </div>
-              <ul className='absolute top-[50%] translate-y-[-50%] flex flex-col items-center gap-12 w-full text-5xl'>
-                <li>
-                  <Link
-                    href='/#about'
-                    className='duration-200 hover:text-primary'
-                    onClick={toggleMenu}
-                  >
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href='/#experience'
-                    className='duration-200 hover:text-primary'
-                    onClick={toggleMenu}
-                  >
-                    Experience
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href='/#projects'
-                    className='duration-200 hover:text-primary'
-                    onClick={toggleMenu}
-                  >
-                    Projects
-                  </Link>
-                </li>
-              </ul>
+              <div className='absolute top-[50%] translate-y-[-50%] flex flex-col items-center gap-16 w-full'>
+                <ul className='flex flex-col items-center gap-12 text-5xl'>
+                  <li>
+                    <Link
+                      href='/#about'
+                      className='duration-200 hover:text-primary'
+                      onClick={toggleMenu}
+                    >
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href='/#experience'
+                      className='duration-200 hover:text-primary'
+                      onClick={toggleMenu}
+                    >
+                      Experience
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href='/#projects'
+                      className='duration-200 hover:text-primary'
+                      onClick={toggleMenu}
+                    >
+                      Projects
+                    </Link>
+                  </li>
+                </ul>
 
-              <div className='flex flex-col justify-end flex-1'>
-                <label className='swap swap-rotate mb-32'>
+                <label className='swap swap-rotate'>
                   <input
                     type='checkbox'
                     onClick={() =>
