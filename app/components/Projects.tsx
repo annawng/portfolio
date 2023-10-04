@@ -13,14 +13,14 @@ const projectList = [
     title: 'Spotify Playlist Generator',
     subtitle: 'Designer & Developer',
     description:
-      'Website for generating playlists with recommended songs that can be exported to Spotify.',
+      'Created a web app for generating playlists of song recommendations that can be exported to Spotify.',
     imageSrc: '/playlist.png',
     href: 'spotify-playlist-generator',
   },
   {
     title: 'News Homepage',
     subtitle: 'Developer',
-    description: 'Responsive CSS layout practice.',
+    description: 'Implemented a responsive homepage for a news site.',
     imageSrc: '/news.png',
     href: 'news-homepage',
   },

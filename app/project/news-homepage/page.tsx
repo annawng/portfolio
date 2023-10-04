@@ -5,6 +5,7 @@ const NewsHomepage = () => {
     <div className='pt-24 px-8 md:px-16'>
       <h1 className='text-3xl mb-8'>News Homepage</h1>
       <p className='max-w-xl'>
+        A{' '}
         <a
           href='https://www.frontendmentor.io/'
           target='_blank'
@@ -12,8 +13,8 @@ const NewsHomepage = () => {
         >
           Frontend Mentor
         </a>{' '}
-        challenge where I built out a responsive news website homepage to
-        practice using CSS Grid for layout.
+        challenge where I built out a responsive news website homepage from the
+        given design files to practice using CSS Grid for layout.
       </p>
 
       <div className='flex gap-2 mt-4 mb-16'>

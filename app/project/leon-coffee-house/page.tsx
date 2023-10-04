@@ -12,10 +12,10 @@ const Leon = () => {
         >
           DUBvelopers
         </a>{' '}
-        is a student organization at the University of Washington that creates
-        websites for local organizations and underserved communities. My team
-        designed and developed a website for a local family-owned Mexican coffee
-        house, Leon Coffee House.
+        &#40;now named Web Impact UW&#41; is a student organization at the
+        University of Washington that creates websites for local organizations
+        and underserved communities. My team designed and developed a website
+        for a local family-owned Mexican coffee house, Leon Coffee House.
       </p>
 
       <div className='flex gap-2 mt-4 mb-16'>

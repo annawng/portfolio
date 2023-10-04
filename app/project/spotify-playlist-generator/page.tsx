@@ -5,9 +5,10 @@ const SpotifyPlaylistGenerator = () => {
     <div className='pt-24 px-8 md:px-16'>
       <h1 className='text-3xl mb-8'>Spotify Playlist Generator</h1>
       <p className='max-w-xl'>
-        Responsive web app that recommends songs based on the song selected by
-        the user. The user can then add these recommendations to a playlist and
-        export it to Spotify after connecting their account.
+        A responsive web app that lets a user search for a song, then provides
+        song recommendations based on the selected song. The user can then add
+        these recommendations to a playlist and export it to Spotify by
+        connecting their account.
       </p>
 
       <div className='flex gap-2 mt-4 mb-16'>
