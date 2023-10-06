@@ -33,7 +33,7 @@ const NewsHomepage = () => {
           Code
         </a>
       </div>
-      <Image src='/news-full.png' width={3000} height={1704} alt='' />
+      <Image src='/news-full.jpg' width={3000} height={1704} alt='' />
     </div>
   );
 };

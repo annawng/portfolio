@@ -28,7 +28,7 @@ const SpotifyPlaylistGenerator = () => {
         </a>
       </div>
       <Image
-        src='/playlist-generator-full.png'
+        src='/playlist-generator-full.jpg'
         width={2464}
         height={9562}
         alt=''

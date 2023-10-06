@@ -34,7 +34,7 @@ const Leon = () => {
           Code
         </a>
       </div>
-      <Image src='/leon-full.png' width={3000} height={7998} alt='' />
+      <Image src='/leon-full.jpg' width={3000} height={7998} alt='' />
     </div>
   );
 };

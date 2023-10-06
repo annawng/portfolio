@@ -6,7 +6,7 @@ const projectList = [
     subtitle: 'Developer',
     description:
       'Worked on a team of designers and developers to build a website for a local coffee shop.',
-    imageSrc: '/leon.png',
+    imageSrc: '/leon.jpg',
     href: 'leon-coffee-house',
   },
   {
@@ -14,14 +14,14 @@ const projectList = [
     subtitle: 'Designer & Developer',
     description:
       'Created a web app for generating playlists of song recommendations that can be exported to Spotify.',
-    imageSrc: '/playlist.png',
+    imageSrc: '/playlist.jpg',
     href: 'spotify-playlist-generator',
   },
   {
     title: 'News Homepage',
     subtitle: 'Developer',
     description: 'Implemented a responsive homepage for a news site.',
-    imageSrc: '/news.png',
+    imageSrc: '/news.jpg',
     href: 'news-homepage',
   },
 ];
