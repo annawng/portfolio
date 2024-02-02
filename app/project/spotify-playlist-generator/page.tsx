@@ -3,7 +3,7 @@ import Image from 'next/image';
 const SpotifyPlaylistGenerator = () => {
   return (
     <div className='pt-24 px-8 md:px-16'>
-      <h1 className='text-3xl mb-8'>Spotify Playlist Generator</h1>
+      <h1 className='text-3xl font-bold mb-8'>Spotify Playlist Generator</h1>
       <p className='max-w-xl'>
         A responsive web app that lets a user search for a song, then provides
         song recommendations based on the selected song. The user can then add

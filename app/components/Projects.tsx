@@ -2,6 +2,13 @@ import ProjectOverview from './ProjectOverview';
 
 const projectList = [
   {
+    title: 'Almost Spotify',
+    subtitle: 'Designer & Developer',
+    description: 'Built a Spotify clone.',
+    imageSrc: '/almost-spotify.jpg',
+    href: 'almost-spotify',
+  },
+  {
     title: 'Leon Coffee House',
     subtitle: 'Developer',
     description:
@@ -17,19 +24,12 @@ const projectList = [
     imageSrc: '/playlist.jpg',
     href: 'spotify-playlist-generator',
   },
-  {
-    title: 'News Homepage',
-    subtitle: 'Developer',
-    description: 'Implemented a responsive homepage for a news site.',
-    imageSrc: '/news.jpg',
-    href: 'news-homepage',
-  },
 ];
 
 const Projects = () => {
   return (
     <section id='projects' className='px-8 md:px-16 py-16'>
-      <h2 className='text-4xl mb-8'>Projects</h2>
+      <h2 className='text-4xl font-semibold mb-8'>Projects</h2>
       <div className='flex flex-col gap-24'>
         {projectList.map((project, index) => (
           <ProjectOverview {...project} key={index} />

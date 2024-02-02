@@ -5,11 +5,11 @@ const Footer = () => {
         <p>Email —</p>
         <p className='text-neutral hover:underline'>
           <a
-            href='mailto:annawang125@gmail.com'
+            href='mailto:wanganna@uw.edu'
             target='_blank'
             className='hover:underline'
           >
-            annawang125@gmail.com
+            wanganna@uw.edu
           </a>
         </p>
       </div>

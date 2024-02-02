@@ -3,7 +3,7 @@ import Image from 'next/image';
 const Leon = () => {
   return (
     <div className='pt-24 px-8 md:px-16'>
-      <h1 className='text-3xl mb-8'>Leon Coffee House</h1>
+      <h1 className='text-3xl font-bold mb-8'>Leon Coffee House</h1>
       <p className='max-w-xl'>
         <a
           href='https://dubvelopersuw.org/'
