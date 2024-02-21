@@ -4,13 +4,13 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --primary: #9f237a;
+  --primary: #036aa1;
   --text: #000;
 }
 
 [data-theme='dark'] {
   --foreground-rgb: 255, 255, 255;
-  --primary: #d298c1;
+  --primary: #35bdfa;
   --text: #fff;
 }
 
@@ -36,4 +36,40 @@ body {
   body:has(.nav-open) {
     overflow: hidden;
   }
+}
+
+/* Custom underline */
+.custom-underline {
+  position: relative;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.custom-underline:hover {
+  opacity: 1;
+}
+
+.custom-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 1.25px;
+  width: 0%;
+  left: 0;
+  background-color: var(--text);
+  transition: 0.3s ease all;
+}
+
+.custom-underline:hover::after {
+  width: 100%;
+}
+
+.custom-underline:not(:hover):after {
+  right: 0;
+  left: auto;
+}
+
+.footer-underline::after {
+  background-color: #fff;
+  height: 1px;
 }

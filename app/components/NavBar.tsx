@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useTheme } from 'next-themes';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { allura } from '../fonts';
+import { HiArrowUpRight as Arrow } from 'react-icons/hi2';
 
 const NavBar = () => {
   const { resolvedTheme, setTheme } = useTheme();
@@ -13,38 +13,36 @@ const NavBar = () => {
     setShowMenu(!showMenu);
   };
   return (
-    <nav className='navbar bg-base-100 fixed z-10 max-w-screen-xl px-8 md:px-16 py-6'>
-      <div className='hidden md:flex w-full'>
-        <div className='flex-1'>
-          <Link href='/' className={allura.className + ' lowercase text-3xl'}>
-            Anna Wang
+    <nav className='navbar w-screen bg-base-100 fixed z-10 uppercase text-xl flex pt-2 px-8 md:px-16'>
+      <div className='absolute inset-0 h-2 w-full bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%'></div>
+      <div className='hidden md:flex justify-between w-full py-6 max-w-screen-lg m-auto'>
+        <div>
+          <Link href='/' className='text-3xl font-extrabold'>
+            AW
           </Link>
         </div>
+        <ul className='flex align-center gap-8 font-normal text-base'>
+          <li className='custom-underline'>
+            <Link href='/'>Home</Link>
+          </li>
+          <li className='custom-underline'>
+            <Link href='/about'>About</Link>
+          </li>
+          <li className='group custom-underline'>
+            <Link
+              href='https://drive.google.com/file/d/1q1nr4Z-dalnK_7k5hQ8P4oTIV_bKoG17/view?usp=sharing'
+              target='_blank'
+              className='flex items-center gap-2'
+            >
+              Resume
+              <Arrow
+                aria-hidden
+                className='transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5'
+              />
+            </Link>
+          </li>
+        </ul>
         <div className='flex items-center'>
-          <ul className='flex align-center gap-8'>
-            <li>
-              <Link href='/#about' className='duration-200 hover:text-primary'>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='/#experience'
-                className='duration-200 hover:text-primary'
-              >
-                Experience
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='/#projects'
-                className='duration-200 hover:text-primary'
-              >
-                Projects
-              </Link>
-            </li>
-          </ul>
-          <div className='divider divider-horizontal'></div>
           <label className='swap swap-rotate'>
             <input
               type='checkbox'
@@ -53,7 +51,6 @@ const NavBar = () => {
               }
               defaultChecked={resolvedTheme === 'light'}
             />
-
             <svg
               className='swap-on fill-current w-7'
               xmlns='http://www.w3.org/2000/svg'
@@ -74,9 +71,9 @@ const NavBar = () => {
         </div>
       </div>
 
-      <div className='w-full flex justify-between md:hidden'>
-        <Link href='/' className={allura.className + ' lowercase text-3xl'}>
-          Anna Wang
+      <div className='w-full flex justify-between py-6 md:hidden'>
+        <Link href='/' className='text-3xl font-extrabold'>
+          AW
         </Link>
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -120,32 +117,25 @@ const NavBar = () => {
                 </svg>
               </div>
               <div className='absolute top-[50%] translate-y-[-50%] flex flex-col items-center gap-16 w-full'>
-                <ul className='flex flex-col items-center gap-12 text-5xl'>
+                <ul className='flex flex-col items-center gap-12 text-4xl'>
                   <li>
-                    <Link
-                      href='/#about'
-                      className='duration-200 hover:text-primary'
-                      onClick={toggleMenu}
-                    >
+                    <Link href='/' onClick={toggleMenu}>
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href='/about' onClick={toggleMenu}>
                       About
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href='/#experience'
-                      className='duration-200 hover:text-primary'
-                      onClick={toggleMenu}
+                      href='https://drive.google.com/file/d/1q1nr4Z-dalnK_7k5hQ8P4oTIV_bKoG17/view?usp=sharing'
+                      target='_blank'
+                      className='flex items-center gap-2'
                     >
-                      Experience
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href='/#projects'
-                      className='duration-200 hover:text-primary'
-                      onClick={toggleMenu}
-                    >
-                      Projects
+                      Resume
+                      <Arrow aria-hidden />
                     </Link>
                   </li>
                 </ul>

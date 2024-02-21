@@ -20,15 +20,17 @@ const config: Config = {
     themes: [
       {
         light: {
-          primary: '#9f237a',
-          accent: '#9f237a',
+          primary: '#036aa1',
+          'primary-light': '#35bdfa',
+          accent: '#036aa1',
           neutral: '#595959',
           'base-100': '#ffffff',
           'base-content': '#000000',
+          'neutral-100': '#1F1F1F',
         },
         dark: {
-          primary: '#d298c1',
-          accent: '#9f237a',
+          primary: '#35bdfa',
+          accent: '#036aa1',
           neutral: '#c4c4c4',
           'base-100': '#121212',
           'base-200': '#1f1f1f',

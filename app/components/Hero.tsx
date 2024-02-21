@@ -1,14 +1,19 @@
+'use client';
+
 const Hero = () => {
   return (
-    <section className='min-h-screen flex flex-col'>
-      <div className='absolute top-[50%] translate-y-[-50%] px-8 md:px-16'>
-        <h1 className='uppercase tracking-widest text-lg text-neutral'>
-          👋 Hi, I&apos;m Anna!
-        </h1>
-        <p className='text-5xl font-bold pt-4'>
-          Software Developer based in Seattle, WA
+    <section className='max-w-screen-lg m-auto flex flex-col gap-16 md:gap-2 pt-40'>
+      <h1 className='text-[104px] sm:text-[160px] md:text-[220px] font-bold flex flex-col gap-0'>
+        <span className='leading-[0.9] sm:leading-[0.6]'>Anna</span>
+        <span className='text-right'>Wang</span>
+      </h1>
+      <div className='flex items-end justify-between gap-12'>
+        <p className='text-base sm:text-lg md:text-2xl font-light uppercase max-w-xs'>
+          Frontend Developer based in Seattle, WA
         </p>
-        <p className='text-5xl pt-2'>Previously @ Mark43</p>
+        <p className='text-base sm:text-lg md:text-2xl font-light uppercase'>
+          Previously @ Mark43
+        </p>
       </div>
     </section>
   );

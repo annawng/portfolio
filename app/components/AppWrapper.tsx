@@ -18,10 +18,12 @@ export default function AppWrapper({
     <>
       {mounted ? (
         <>
-          <header className='max-w-screen-xl m-auto'>
+          <header>
             <NavBar />
           </header>
-          <main className='max-w-screen-xl m-auto'>{children}</main>
+          <main className='max-w-screen-xl m-auto font-light px-8 md:px-16'>
+            {children}
+          </main>
           <Footer />
         </>
       ) : (
