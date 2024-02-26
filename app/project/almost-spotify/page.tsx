@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 const AlmostSpotify = () => {
   return (
-    <div className='pt-24 pb-16 md:py-32 max-w-screen-lg m-auto'>
-      <h1 className='text-3xl font-bold mb-4 md:mb-8'>Almost Spotify</h1>
+    <div className='max-w-screen-sm m-auto'>
+      <h1 className='text-2xl font-medium mb-4'>Almost Spotify</h1>
       <p className='max-w-xl mb-2'>
         A responsive Spotify clone built with Next.js, TypeScript, and Tailwind
         CSS. It uses NextAuth for authentication, the Spotify API to fetch data
@@ -24,7 +24,7 @@ const AlmostSpotify = () => {
         deployed publicly.
       </p>
 
-      <div className='flex gap-2 mt-4 mb-12 md:mb-16'>
+      <div className='flex gap-2 mt-4 mb-12'>
         <a
           href='https://github.com/annawng/almost-spotify/tree/main'
           target='_blank'
@@ -35,7 +35,7 @@ const AlmostSpotify = () => {
       </div>
       <div className='flex flex-col gap-8'>
         <section>
-          <h2 className='text-xl md:text-2xl font-semibold mb-4'>Login</h2>
+          <h2 className='text-xl font-medium mb-4'>Login</h2>
           <Image
             src='/almost-spotify-login.gif'
             width={3000}
@@ -44,7 +44,7 @@ const AlmostSpotify = () => {
           />
         </section>
         <section>
-          <h2 className='text-xl md:text-2xl font-semibold mb-4'>Home</h2>
+          <h2 className='text-xl font-medium mb-4'>Home</h2>
           <Image
             src='/almost-spotify-home.gif'
             width={3000}
@@ -53,7 +53,7 @@ const AlmostSpotify = () => {
           />
         </section>
         <section>
-          <h2 className='text-xl md:text-2xl font-semibold mb-4'>
+          <h2 className='text-xl font-medium mb-4'>
             Search & Playback Controls
           </h2>
           <Image
@@ -64,7 +64,7 @@ const AlmostSpotify = () => {
           />
         </section>
         <section>
-          <h2 className='text-xl md:text-2xl font-semibold mb-4'>Library</h2>
+          <h2 className='text-xl font-medium mb-4'>Library</h2>
           <Image
             src='/almost-spotify-library.gif'
             width={3000}
@@ -73,7 +73,7 @@ const AlmostSpotify = () => {
           />
         </section>
         <section>
-          <h2 className='text-xl md:text-2xl font-semibold mb-4'>Playlists</h2>
+          <h2 className='text-xl font-medium mb-4'>Playlists</h2>
           <Image
             src='/almost-spotify-playlists.gif'
             width={3000}
@@ -82,9 +82,7 @@ const AlmostSpotify = () => {
           />
         </section>
         <section>
-          <h2 className='text-xl md:text-2xl font-semibold mb-4'>
-            Responsive Design
-          </h2>
+          <h2 className='text-xl font-medium mb-4'>Responsive Design</h2>
           <Image
             src='/almost-spotify-responsive.gif'
             width={3000}

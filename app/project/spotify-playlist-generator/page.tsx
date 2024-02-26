@@ -2,10 +2,8 @@ import Image from 'next/image';
 
 const SpotifyPlaylistGenerator = () => {
   return (
-    <div className='pt-24 pb-16 md:py-32 max-w-screen-lg m-auto'>
-      <h1 className='text-3xl font-bold mb-4 md:mb-8'>
-        Spotify Playlist Generator
-      </h1>
+    <div className='max-w-screen-sm m-auto'>
+      <h1 className='text-xl font-medium mb-4'>Spotify Playlist Generator</h1>
       <p className='max-w-xl'>
         A responsive web app that lets a user search for a song, then provides
         song recommendations based on the selected song. The user can then add
@@ -13,7 +11,7 @@ const SpotifyPlaylistGenerator = () => {
         connecting their account.
       </p>
 
-      <div className='flex gap-2 mt-4 mb-12 md:mb-16'>
+      <div className='flex gap-2 mt-4 mb-12'>
         <a
           href='https://playlistgenerator.netlify.app/'
           target='_blank'

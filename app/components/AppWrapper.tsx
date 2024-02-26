@@ -17,15 +17,12 @@ export default function AppWrapper({
   return (
     <>
       {mounted ? (
-        <>
-          <header>
-            <NavBar />
-          </header>
+        <div className='py-16'>
           <main className='max-w-screen-xl m-auto font-light px-8 md:px-16'>
             {children}
           </main>
           <Footer />
-        </>
+        </div>
       ) : (
         <div className='w-screen h-screen flex flex-col items-center justify-center'>
           <span className='loading loading-spinner loading-lg text-primary'></span>

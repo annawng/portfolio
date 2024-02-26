@@ -28,8 +28,8 @@ const projectList = [
 
 const Projects = () => {
   return (
-    <section className='py-24 md:py-40 max-w-screen-lg m-auto'>
-      <div className='flex flex-col gap-24'>
+    <section className='max-w-screen-sm m-auto'>
+      <div className='flex flex-col gap-16'>
         {projectList.map((project, index) => (
           <ProjectOverview {...project} key={index} />
         ))}

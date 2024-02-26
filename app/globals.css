@@ -70,6 +70,6 @@ body {
 }
 
 .footer-underline::after {
-  background-color: #fff;
+  background-color: var(--text);
   height: 1px;
 }

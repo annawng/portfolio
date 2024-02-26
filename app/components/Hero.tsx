@@ -2,17 +2,19 @@
 
 const Hero = () => {
   return (
-    <section className='max-w-screen-lg m-auto flex flex-col gap-16 md:gap-2 pt-40'>
-      <h1 className='text-[104px] sm:text-[160px] md:text-[220px] font-bold flex flex-col gap-0'>
-        <span className='leading-[0.9] sm:leading-[0.6]'>Anna</span>
-        <span className='text-right'>Wang</span>
-      </h1>
-      <div className='flex items-end justify-between gap-12'>
-        <p className='text-base sm:text-lg md:text-2xl font-light uppercase max-w-xs'>
-          Frontend Developer based in Seattle, WA
+    <section className='max-w-screen-sm m-auto flex flex-col gap-4 pb-12'>
+      <h1 className='text-2xl font-medium'>Anna Wang</h1>
+      <div className='text-base font-light text-neutral flex flex-col gap-2'>
+        <p>
+          Frontend developer based in Seattle. Currently pursuing a Bachelor of
+          Science degree in Computer Science at the University of Washington,
+          intending to graduate in June 2024. Previously a UX Engineering Intern
+          at Mark43.
         </p>
-        <p className='text-base sm:text-lg md:text-2xl font-light uppercase'>
-          Previously @ Mark43
+        <p>
+          My hobbies include listening to music (63,227 minutes last year),
+          making playlists (I have over 300 for some reason), and playing
+          instruments (mostly piano and guitar).
         </p>
       </div>
     </section>

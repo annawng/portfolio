@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 const Leon = () => {
   return (
-    <div className='pt-24 pb-16 md:py-32 max-w-screen-lg m-auto'>
-      <h1 className='text-3xl font-bold mb-4 md:mb-8'>Leon Coffee House</h1>
-      <p className='mb-4 md:mb-8 max-w-xl'>
+    <div className='max-w-screen-sm m-auto'>
+      <h1 className='text-xl font-medium mb-4'>Leon Coffee House</h1>
+      <p className='mb-4 max-w-xl'>
         <a
           href='https://dubvelopersuw.org/'
           target='_blank'
@@ -18,7 +18,7 @@ const Leon = () => {
         for a local family-owned Mexican coffee house, Leon Coffee House.
       </p>
 
-      <div className='flex gap-2 mt-4 mb-12 md:mb-16'>
+      <div className='flex gap-2 mt-4 mb-12'>
         <a
           href='http://leoncoffeehouse.com/'
           target='_blank'
