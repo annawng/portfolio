@@ -30,7 +30,7 @@ const AlmostSpotify = () => {
           target='_blank'
           className='btn btn-secondary'
         >
-          Code
+          GitHub
         </a>
       </div>
       <div className='flex flex-col gap-8'>

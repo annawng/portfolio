@@ -24,7 +24,7 @@ const SpotifyPlaylistGenerator = () => {
           target='_blank'
           className='btn btn-secondary'
         >
-          Code
+          GitHub
         </a>
       </div>
       <Image

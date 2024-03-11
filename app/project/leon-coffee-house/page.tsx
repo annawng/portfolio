@@ -31,7 +31,7 @@ const Leon = () => {
           target='_blank'
           className='btn btn-secondary'
         >
-          Code
+          GitHub
         </a>
       </div>
       <Image src='/leon-full.jpg' width={3000} height={7998} alt='' />

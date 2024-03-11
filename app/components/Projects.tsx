@@ -28,7 +28,7 @@ const projectList = [
 
 const Projects = () => {
   return (
-    <section className='max-w-screen-sm m-auto'>
+    <section className='max-w-screen-sm m-auto py-12'>
       <div className='flex flex-col gap-16'>
         {projectList.map((project, index) => (
           <ProjectOverview {...project} key={index} />

@@ -1,21 +1,21 @@
 'use client';
 
+import { HiChevronDown as ChevronDown } from 'react-icons/hi2';
+
 const Hero = () => {
   return (
-    <section className='max-w-screen-sm m-auto flex flex-col gap-4 pb-12'>
-      <h1 className='text-2xl font-medium'>Anna Wang</h1>
-      <div className='text-base font-light text-neutral flex flex-col gap-2'>
-        <p>
-          Frontend developer based in Seattle. Currently pursuing a Bachelor of
-          Science degree in Computer Science at the University of Washington,
-          intending to graduate in June 2024. Previously a UX Engineering Intern
-          at Mark43.
+    <section className=' m-auto flex flex-col items-center gap-4 pb-12 background-gradient text-stone-900'>
+      <div className='flex flex-col gap-2 md:gap-6 text-center pt-72 pb-48 justify-center'>
+        <h1 className='text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold'>
+          Anna Wang
+        </h1>
+        <p className='text-md sm:text-lg md:text-2xl font-extralight lowercase text-stone-500'>
+          Frontend Developer based in Seattle, WA
         </p>
-        <p>
-          My hobbies include listening to music (63,227 minutes last year),
-          making playlists (I have over 300 for some reason), and playing
-          instruments (mostly piano and guitar).
-        </p>
+      </div>
+      <div className='flex gap-2 items-center'>
+        <p className='text-sm md:text-base lowercase'>View my work</p>
+        <ChevronDown size={24} aria-hidden />
       </div>
     </section>
   );

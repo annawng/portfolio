@@ -8,12 +8,6 @@
   --text: #000;
 }
 
-[data-theme='dark'] {
-  --foreground-rgb: 255, 255, 255;
-  --primary: #35bdfa;
-  --text: #fff;
-}
-
 @layer components {
   .btn {
     @apply normal-case btn-sm;
@@ -28,14 +22,27 @@
   }
 }
 
+:root {
+  background-color: #e7e7fa;
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
+  color: #000;
+  background-color: #fff;
 }
 
 @media (max-width: 699px) {
   body:has(.nav-open) {
     overflow: hidden;
   }
+}
+
+/* Background gradient */
+.background-gradient {
+  background-image: url('/45.webp'),
+    linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  background-blend-mode: screen;
+  background-size: cover;
 }
 
 /* Custom underline */

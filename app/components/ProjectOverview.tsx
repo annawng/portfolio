@@ -72,7 +72,7 @@ const ProjectOverview = ({
       </div>
       <div className='flex flex-col gap-3 md:pl-12 flex-1 mt-8 md:mt-0'>
         <div>
-          <p className='text-sm uppercase text-neutral'>{subtitle}</p>
+          <p className='text-sm uppercase text-white/80'>{subtitle}</p>
           <h3 className='text-xl font-semibold mt-1'>{title}</h3>
         </div>
         <p>{description}</p>
