@@ -9,16 +9,16 @@
 }
 
 @layer components {
-  .btn {
-    @apply normal-case btn-sm;
+  .button {
+    @apply transition duration-300 py-2 px-4 text-sm rounded-full border;
   }
 
-  .btn-primary {
-    @apply text-white bg-accent border-accent hover:bg-accent-focus hover:border-accent-focus;
+  .button-primary {
+    @apply text-white bg-stone-800 border-stone-800 hover:bg-stone-950 hover:border-stone-950;
   }
 
-  .btn-secondary {
-    @apply bg-transparent border-neutral-300 text-primary hover:bg-neutral-300/30 hover:border-neutral-300;
+  .button-secondary {
+    @apply border-neutral-300 text-stone-800 hover:bg-neutral-300/30 hover:border-neutral-300;
   }
 }
 

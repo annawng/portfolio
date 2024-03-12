@@ -22,14 +22,14 @@ const Leon = () => {
         <a
           href='http://leoncoffeehouse.com/'
           target='_blank'
-          className='btn btn-primary'
+          className='button button-primary'
         >
           Live Site
         </a>
         <a
           href='https://github.com/webimpactuw/Leon-Cafe'
           target='_blank'
-          className='btn btn-secondary'
+          className='button button-secondary'
         >
           GitHub
         </a>

@@ -70,7 +70,7 @@ const ProjectOverview = ({
 
         <Link
           href={`/project/${href}`}
-          className='btn btn-primary w-fit md:hidden'
+          className='button button-primary w-fit md:hidden'
         >
           View Project
         </Link>

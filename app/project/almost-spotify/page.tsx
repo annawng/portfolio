@@ -28,7 +28,7 @@ const AlmostSpotify = () => {
         <a
           href='https://github.com/annawng/almost-spotify/tree/main'
           target='_blank'
-          className='btn btn-secondary'
+          className='button button-secondary'
         >
           GitHub
         </a>

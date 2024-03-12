@@ -15,14 +15,14 @@ const SpotifyPlaylistGenerator = () => {
         <a
           href='https://playlistgenerator.netlify.app/'
           target='_blank'
-          className='btn btn-primary'
+          className='button button-primary'
         >
           Live Site
         </a>
         <a
           href='https://github.com/annawng/spotify-playlist-generator'
           target='_blank'
-          className='btn btn-secondary'
+          className='button button-secondary'
         >
           GitHub
         </a>
