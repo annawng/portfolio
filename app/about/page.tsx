@@ -4,13 +4,13 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-    <section className='pt-40 pb-20 background-gradient'>
-      <div className='flex flex-col md:flex-row-reverse gap-12 md:gap-24 max-w-screen-lg m-auto'>
-        <div className='max-w-xl flex flex-col gap-4 md:gap-8'>
-          <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold'>
+    <section className='pt-32 sm:pt-40 pb-20 background-gradient'>
+      <div className='flex flex-col-reverse md:flex-row-reverse gap-12 lg:gap-24 max-w-screen-lg m-auto px-8 sm:px-16'>
+        <div className='flex flex-col gap-6 md:gap-8'>
+          <h1 className='text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold'>
             About Me
           </h1>
-          <div className='flex flex-col gap-3 max-w-56 text-stone-600'>
+          <div className='flex flex-col gap-6 sm:gap-3 max-w-56 text-stone-600'>
             <p>
               Hello! I&apos;m Anna, a senior studying Computer Science at the
               University of Washington. With a background in full-stack
@@ -43,7 +43,7 @@ const About = () => {
             width={2003}
             height={2003}
             alt=''
-            className='shine aspect-[4/5] object-cover rounded-2xl'
+            className='w-56 md:w-full shine aspect-[4/5] object-cover rounded-2xl'
           />
         </div>
       </div>
