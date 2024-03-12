@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className='px-8 md:px-16 py-12 flex flex-col gap-8 md:flex-row md:justify-between md:items-center'>
-      <div className='max-w-screen-sm w-full m-auto flex flex-col gap-14'>
+      <div className='max-w-screen-lg w-full m-auto flex flex-col gap-14'>
         <div>
           <div className='flex items-center gap-2 font-medium'>
             <a
@@ -32,8 +32,8 @@ const Footer = () => {
               Email
             </a>
           </div>
-          <p className='text-xs font-light mt-2'>
-            Website built with Figma, Next.js, and Tailwind CSS.
+          <p className='text-xs font-light mt-2 text-stone-600'>
+            Built with Figma, Next.js, Tailwind CSS, and many hours of my life.
           </p>
         </div>
       </div>

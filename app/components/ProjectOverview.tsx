@@ -37,21 +37,12 @@ const ProjectOverview = ({
 
   return (
     <div className='flex flex-col md:flex-row justify-between md:items-center w-full overflow-hidden'>
-      <div className='overflow-hidden flex justify-center sm:bg-base-200 sm:p-12 md:w-7/12'>
-        <Link href={`/project/${href}`}>
-          <Image
-            src={imageSrc}
-            width={1080}
-            height={675}
-            alt=''
-            className='w-full object-cover md:hidden'
-          />
-        </Link>
+      <div className='overflow-hidden flex justify-center md:w-7/12 rounded-2xl'>
         <motion.div
           animate={controls}
           variants={imageVariants}
           transition={{ ease: 'easeInOut' }}
-          className='hidden md:block'
+          className=''
         >
           <Link href={`/project/${href}`}>
             <Image
@@ -59,7 +50,7 @@ const ProjectOverview = ({
               width={1080}
               height={675}
               alt=''
-              className='w-full object-cover drop-shadow-2xl cursor-pointer'
+              className='w-full max-w-20 object-cover cursor-pointer'
               onMouseEnter={() => {
                 controls.start('hover');
               }}
@@ -72,10 +63,10 @@ const ProjectOverview = ({
       </div>
       <div className='flex flex-col gap-3 md:pl-12 flex-1 mt-8 md:mt-0'>
         <div>
-          <p className='text-sm uppercase text-white/80'>{subtitle}</p>
+          <p className='text-sm uppercase text-stone-500'>{subtitle}</p>
           <h3 className='text-xl font-semibold mt-1'>{title}</h3>
         </div>
-        <p>{description}</p>
+        <p className='text-stone-600'>{description}</p>
 
         <Link
           href={`/project/${href}`}
