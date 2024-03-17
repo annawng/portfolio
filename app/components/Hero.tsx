@@ -14,7 +14,7 @@ const Hero = () => {
         </p>
       </div>
       <div className='flex gap-2 items-center'>
-        <p className='text-sm md:text-base lowercase'>View my work</p>
+        <p className='text-sm md:text-base lowercase'>Check out my work</p>
         <ChevronDown size={24} aria-hidden />
       </div>
     </section>

@@ -19,13 +19,7 @@ const config: Config = {
     themes: [
       {
         light: {
-          primary: '#036aa1',
-          'primary-light': '#35bdfa',
-          accent: '#036aa1',
-          neutral: '#595959',
-          'neutral-content': '#717171',
-          'base-100': '#ffffff',
-          'base-content': '#000000',
+          primary: '#6969BC',
         },
       },
     ],

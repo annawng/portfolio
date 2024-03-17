@@ -37,7 +37,7 @@ const ProjectOverview = ({
 
   return (
     <div className='flex flex-col md:flex-row justify-between md:items-center w-full overflow-hidden'>
-      <div className='overflow-hidden flex justify-center md:w-7/12 rounded-2xl'>
+      <div className='overflow-hidden flex justify-center md:max-w-lg rounded-2xl'>
         <motion.div
           animate={controls}
           variants={imageVariants}
