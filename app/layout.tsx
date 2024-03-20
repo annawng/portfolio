@@ -6,7 +6,7 @@ import { font } from './fonts';
 import AppWrapper from './components/AppWrapper';
 
 export const metadata: Metadata = {
-  title: 'Anna Wang | Frontend Developer',
+  title: 'Anna Wang | Full-Stack Developer',
   icons: {
     icon: '/favicon.ico',
   },

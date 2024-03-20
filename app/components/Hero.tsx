@@ -10,7 +10,7 @@ const Hero = () => {
           Anna Wang
         </h1>
         <p className='text-md sm:text-lg md:text-2xl font-extralight lowercase text-stone-500'>
-          Frontend Developer based in Seattle, WA
+          Full-Stack Developer based in Seattle, WA
         </p>
       </div>
       <div className='flex gap-2 items-center'>
