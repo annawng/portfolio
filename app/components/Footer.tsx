@@ -25,7 +25,7 @@ const Footer = () => {
               ✧
             </p>
             <a
-              href='mailto:wanganna@uw.edu'
+              href='mailto:annawang125@gmail.com'
               target='_blank'
               className='custom-underline footer-underline'
             >
