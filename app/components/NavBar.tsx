@@ -23,7 +23,7 @@ const NavBar = () => {
         </li>
         <li className='flex'>
           <Link
-            href='https://drive.google.com/file/d/1wH782LT9rZAEnuELbuw1DZl-2oFz648W/view?usp=sharing'
+            href='https://drive.google.com/file/d/1Vo59mOUyev-kSlpzdfslEzjs-7RIIcN5/view?usp=sharing'
             target='_blank'
             className='hover:bg-white/40 px-4 py-2 rounded-full transition duration-200 ease-in-out'
           >

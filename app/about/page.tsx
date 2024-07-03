@@ -13,28 +13,22 @@ const About = () => {
             </h1>
             <div className='flex flex-col gap-6 sm:gap-3 max-w-56 text-stone-600'>
               <p>
-                Hello! I&apos;m Anna, a senior studying Computer Science at the
-                University of Washington. With a background in full-stack
-                development, UI/UX design, accessibility testing, and design
-                systems, I love working alongside designers and engineers to
-                build intuitive, enjoyable experiences.
+                Hi, I&apos;m Anna! I recently graduated from the University of
+                Washington with a B.S. in Computer Science. Currently, I&apos;m
+                at SoundCloud as a Web Engineering Intern, and this fall,
+                I&apos;ll be joining Snap Inc. as a Software Engineer.
               </p>
               <p>
-                Last summer, I joined Mark43 as a UX Engineering Intern, where I
-                contributed to the design system used across the company&apos;s
-                public safety products. I loved getting to work on the entire
-                process of creating components: discussing with the engineering
-                and product teams about the use cases and intended behavior,
-                designing in Figma, developing in React, and creating
-                interactive examples with documentation in Storybook. I also had
-                the opportunity to apply my expertise in web accessibility to
-                increase WCAG compliance across the component library.
+                With a background in full-stack development, UI/UX design,
+                accessibility testing, and design systems, I love working
+                alongside designers and engineers to build intuitive, enjoyable
+                experiences.
               </p>
               <p>
-                When I&apos;m not coding or designing, you&apos;ll probably find
-                me listening to music (63,227 minutes last year), making Spotify
-                playlists (I have over 350—is that concerning?), or playing
-                instruments (mostly piano and guitar).
+                When I&apos;m not coding, you&apos;ll probably find me blasting
+                music through my headphones, making hundreds of Spotify
+                playlists that don&apos;t need to exist, practicing guitar at
+                absurd hours, or sustaining hearing damage at a concert.
               </p>
             </div>
           </div>
